@@ -1,0 +1,290 @@
+/* Base page styles */
+body {
+    font-family: Arial, sans-serif; /* readable default font stack */
+    margin: 0;                      /* remove default outer spacing */
+    padding: 0;                     /* remove default inner spacing */
+    background: #fff;               /* white background */
+    color: #222;                    /* dark gray text for contrast */
+}
+
+/* Header bar with a straight (left→right) gradient */
+header {
+    background: linear-gradient(to right, #6366f1, #0ea5e9);
+    padding: 10px;                  /* breathing room inside the bar */
+}
+
+/* Navigation list laid out in a single row */
+nav ul { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+nav li { 
+  display: inline-block;       /* places items side by side */
+  vertical-align: middle;      /* aligns them nicely with any image */
+  margin-right: 24px;          /* space between items */
+}
+
+nav li:last-child { 
+  margin-right: 0;             /* no extra space after the last item */
+}
+/* Navigation links */
+nav a {
+    color: white;                   /* white links on dark header */
+    text-decoration: none;          /* no underline by default */
+}
+
+nav a:hover {
+    text-decoration: underline;     /* underline on hover for clarity */
+}
+
+/* Small circular profile image in the nav */
+.nav-photo {
+    width: 40px;                    /* avatar size */
+    height: 40px;
+    border-radius: 50%;             /* circle */
+    object-fit: cover;              /* crop to fill the circle nicely */
+}
+
+/* Intro/welcome box with an angled gradient */
+.intro {
+    background: linear-gradient(135deg, #a78bfa, #0ea5e9);
+    color: white;                   /* readable text on gradient */
+    padding: 40px 20px;             /* inner spacing */
+    border-radius: 12px;            /* rounded corners */
+    margin: 20px;                   /* space around the box */
+    text-align: center;             /* center the text */
+}
+
+/* Main content wrapper spacing */
+main {
+    padding: 20px;
+}
+
+/* Footer bar styles */
+footer {
+    background: #f4f4f4;            /* light gray bar */
+    text-align: center;             /* centered text */
+    padding: 10px;                  /* inner spacing */
+    margin-top: 20px;               /* space above footer */
+}
+
+
+/* About Me page photo */
+.profile {
+  width: 180px;        /* photo size */
+  height: 180px;
+  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;   /* crops to fill the circle */
+  display: block;
+  margin: 10px 0 15px; /* spacing around the photo */
+}
+
+/* About Me page video */
+.intro-video {
+  max-width: 100%;     /* makes video responsive */
+  height: auto;        /* keep correct proportions */
+  display: block;
+  margin-top: 10px;
+}
+
+/* PROJECTS PAGE STYLES */
+
+/* Keeps content centered and prevents stretching full width */
+.container {
+  max-width: 1100px;  /* sets maximum width */
+  margin: 0 auto;     /* centers horizontally */
+  padding: 0 16px;    /* padding on smaller screens */
+}
+
+/* Page heading section with gradient background */
+.projects-header {
+  background: linear-gradient(135deg, #6366f1, #0ea5e9);
+  color: #fff;
+  padding: 44px 20px;   
+  border-radius: 14px;
+  margin: 22px 0 30px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+.projects-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+.projects-header p {
+  margin: 0;
+  opacity: .95; /* slightly faded */
+}
+
+/* Project grid using inline-block (no flex/grid) */
+.project-grid {
+  text-align: center;   /* helps center the inline-blocks */
+  margin-bottom: 40px;
+}
+
+/* Each project card */
+.project-card {
+  display: inline-block;       /* sits side-by-side without flex/grid */
+  vertical-align: top;
+  width: 31%;                  /* 3 per row on large screens */
+  padding: 16px;
+  margin: 0 1% 16px;           /* spacing between cards */
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  text-align: left;            /* reset text alignment inside */
+}
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-4px); /* card lifts on hover */
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  border-color: #d9d9d9;
+}
+
+/* Card headings with a gradient underline */
+.project-card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+}
+.project-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, #a78bfa, #0ea5e9);
+  border-radius: 999px;
+}
+
+/* Project text */
+.project-card p {
+  margin: 12px 0 0;
+  color: #444;
+}
+
+/* Badges (small pill labels under each card) */
+.badges {
+  margin-top: 12px;
+}
+.badge {
+  display: inline-block;
+  font-size: .78rem;
+  line-height: 1;
+  padding: 7px 10px;
+  background: #f5f7ff;
+  color: #3b4bff;
+  border: 1px solid #e3e7ff;
+  border-radius: 999px; /* pill shape */
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+/* Links (Live, Report, PDF, etc.) at the bottom of each card */
+.card-links {
+  margin-top: 12px;
+}
+.card-links a {
+  color: #0ea5e9;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+.card-links a:hover,
+.card-links a:focus {
+  color: #6366f1;
+  border-color: #6366f1;
+  text-decoration: none;
+}
+
+/* Media Queries (manual responsiveness, no flex/grid) */
+@media (max-width: 599px) {
+  .project-card { width: 98%; }   /* 1 per row */
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .project-card { width: 48%; }   /* 2 per row */
+}
+@media (min-width: 1024px) {
+  .project-card { width: 31%; }   /* 3 per row */
+}
+
+
+
+/* CONTACT PAGE STYLES */
+
+/* Make width calculations stable */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; } /*each of these elements inherits the box-sizing from its parent*/
+
+/* Keep the form centered and tidy */
+.contact-form{
+  max-width: 720px;         /* total form width */
+  margin: 0 auto 30px;      /* center the form */
+  padding: 20px;            /* inner padding */
+  border-radius: 12px;
+  overflow: hidden;         /* keeps children inside rounded corners */
+}
+
+/* Space between rows */
+.form-row{ margin-bottom: 16px; }
+
+/* All controls share identical sizing */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="number"],
+.contact-form textarea {
+  display: block;
+  width: 100%;              /* full width */
+  padding: 12px 14px;       /* same padding */
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;      /* same corner radius for ALL */
+  background: #fffdfb;
+  font: inherit;
+  color: #222;
+  margin: 0;
+}
+
+/* Textarea height so it looks proportional */
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Focus style */
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14,165,233,.15);
+}
+
+/* Hint text spans full width but doesn’t affect inputs */
+.hint{
+  display: block;
+  margin-top: 6px;
+  color: #777;
+  font-size: .9rem;
+}
+
+/* Submit button matches input width & corners */
+.form-actions{ margin-top: 12px; }
+.btn-submit{
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #f59e0b, #ff7f50);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.1);
+}
+.btn-submit:hover{ filter: brightness(1.05); } /*button looks a bit brighter when you move your mouse over it*/
+.btn-submit:active{ transform: translateY(1px); } /*button looks like it’s being physically pressed down when you click it*/

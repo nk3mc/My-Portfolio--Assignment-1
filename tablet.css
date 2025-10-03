@@ -1,0 +1,5 @@
+/* 2 column cards */
+.container{ max-width:900px; }
+.project-card{ width:48%; }       /* 48% + 1% side margins ≈ 2 cols */
+.intro h1{ font-size:2.1rem; }
+.intro p{  font-size:1.05rem; }

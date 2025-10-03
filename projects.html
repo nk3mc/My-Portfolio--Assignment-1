@@ -1,0 +1,127 @@
+<!DOCTYPE html> <!-- HTML5 document -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- proper character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobile -->
+  <title>Projects</title> <!-- shows on browser tab -->
+
+  <!-- Shared and viewport-specific styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="(max-width: 599px)" href="mobile.css"> <!-- Loads mobile.css only on screens 599px wide or smaller -->
+  <link rel="stylesheet" media="(min-width: 600px) and (max-width: 1023px)" href="tablet.css"> <!-- Loads tablet.css only on screens between 600px and 1023px -->
+  <link rel="stylesheet" media="(min-width: 1024px)" href="laptop.css"> <!-- Loads laptop.css only on screens 1024px wide or larger -->
+</head>
+<body>
+  <!-- Navigation bar -->
+  <header>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>      <!-- Home link -->
+        <li><a href="about.html">About Me</a></li>  <!-- About page link -->
+        <li><a href="projects.html" aria-current="page">Projects</a></li> <!-- Current page -->
+        <li><a href="contact.html">Contact Me</a></li> <!-- Contact page link -->
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container"> <!-- main container to center and limit width -->
+    <!-- Page heading section -->
+    <section class="projects-header" aria-labelledby="page-title">
+      <h1 id="page-title">My Projects</h1> <!-- Main title -->
+      <p>Find below some of my projects from my previous semesters here at Ontario Tech University.</p>
+    </section>
+
+    <!-- List of project cards -->
+    <section class="project-grid" aria-labelledby="projects-list-title"> <!--section that contains all project cards.-->
+      <!-- Hidden heading satisfies validator & helps screen readers -->
+      <h2 id="projects-list-title" class="visually-hidden">Project list</h2> <!--an H2 that’s hidden visually but read by screen readers-->
+
+      <!-- Project card 1 -->
+      <article class="project-card">
+        <h2>History: Trade Routes &amp; Culture</h2>
+        <p>Short study on how the Silk Road spread ideas, languages, and technology.
+           Mapped key stops and wrote a brief on cultural exchange across regions.</p>
+        <div class="badges"> <!--small tags/labels container-->
+          <span class="badge">Maps</span>
+          <span class="badge">Primary Sources</span>
+          <span class="badge">Synthesis</span>
+        </div>
+        <div class="card-links"> <!--container for links related to the card.-->
+          <a href="#" target="_blank">Summary</a>
+          <a href="#" target="_blank">Timeline</a>
+        </div>
+      </article>
+
+      <!-- Project card 2 -->
+      <article class="project-card">
+        <h2>Computer Security: Password Cracking Basics</h2>
+        <p>Compared strong vs. weak passwords and demonstrated hashing concepts.
+           Wrote simple guidelines for safer authentication and MFA adoption.</p>
+        <div class="badges">
+          <span class="badge">Hashing</span>
+          <span class="badge">MFA</span>
+          <span class="badge">Best Practices</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Write-up</a>
+          <a href="#" target="_blank">Checklist</a>
+        </div>
+      </article>
+
+      <!-- Project card 3 -->
+      <article class="project-card">
+        <h2>Networking: Small Office Topology</h2>
+        <p>Designed a basic LAN with VLANs for staff/guests and a simple IP plan.
+           Documented routing, DHCP ranges, and a minimal firewall rule set.</p>
+        <div class="badges">
+          <span class="badge">VLANs</span>
+          <span class="badge">IP Plan</span>
+          <span class="badge">Firewall</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Diagram</a>
+          <a href="#" target="_blank">Config Notes</a>
+        </div>
+      </article>
+
+      <!-- Project card 4 -->
+      <article class="project-card">
+        <h2>Biology: Enzymes &amp; Temperature</h2>
+        <p>Mini-lab write-up on how temperature affects enzyme activity.
+           Graphed reaction rates and explained denaturation in plain language.</p>
+        <div class="badges">
+          <span class="badge">Lab</span>
+          <span class="badge">Graphing</span>
+          <span class="badge">Analysis</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Lab Report</a>
+          <a href="#" target="_blank">Chart</a>
+        </div>
+      </article>
+
+      <!-- Project card 5 -->
+      <article class="project-card">
+        <h2>Law &amp; Ethics: Data Privacy Case</h2>
+        <p>Case brief on consent and data retention. Compared legal requirements
+           with ethical guidelines and wrote recommendations for fair data use.</p>
+        <div class="badges">
+          <span class="badge">Privacy</span>
+          <span class="badge">Policy</span>
+          <span class="badge">Ethics</span>
+        </div>
+        <div class="card-links">
+          <a href="#" target="_blank">Case Brief</a>
+          <a href="#" target="_blank">Recommendations</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nkem.C</p>
+  </footer>
+</body>
+</html>
+

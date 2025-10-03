@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- Tells the browser this is an HTML5 document -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Sets the character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobile -->
+  <title>About Me</title> <!-- Title shown in browser tab -->
+
+   <!-- Shared and viewport-specific styles -->
+  <link rel="stylesheet" href="style.css"> <!-- links the CSS file for styling -->
+  <link rel="stylesheet" media="(max-width: 599px)" href="mobile.css"> <!-- Loads mobile.css only on screens 599px wide or smaller -->
+  <link rel="stylesheet" media="(min-width: 600px) and (max-width: 1023px)" href="tablet.css"> <!-- Loads tablet.css only on screens between 600px and 1023px -->
+  <link rel="stylesheet" media="(min-width: 1024px)" href="laptop.css"> <!-- Loads laptop.css only on screens 1024px wide or larger -->
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li> <!-- link to Home page -->
+        <li><a href="about.html">About Me</a></li> <!-- link to About page -->
+        <li><a href="projects.html">Projects</a></li> <!-- link to Projects page -->
+        <li><a href="contact.html">Contact Me</a></li> <!-- link to Contact page -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <h1>About Me</h1> <!-- Page heading -->
+
+    <!-- My photo -->
+    <img src="images/me.jpg" alt="My About Me Photo" class="profile">
+
+    <!-- Short intro paragraph -->
+    <p>
+      Hi, my name is Nkem Chukwuemeka. 
+      I am a second-year student at Ontario Tech University. 
+      I am originally from Nigeria and I moved to Canada to further my education.
+      I am majoring in Networking & IT Security. 
+      I love art, music and I enjoy playing games. 
+    </p>
+
+    <!-- Intro video with poster image -->
+    <video
+      class="intro-video"
+      controls
+      poster="images/poster.jpg"
+      width="640">
+      <source src="videos/intro.mp4" type="video/mp4">
+      <!-- Fallback text if video isn’t supported -->
+      Your browser does not support the video tag.
+    </video>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nkem.C</p>
+  </footer>
+</body>
+</html>

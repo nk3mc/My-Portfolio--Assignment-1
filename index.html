@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- tells the browser this is an HTML5 document -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- makes sure text displays correctly (special characters, accents, etc.) -->
+    <meta name="viewport" content="width=device-width, initial scale=1.0"> <!-- Makes page responsive on mobile -->
+    <title>Home</title> <!-- text that shows in the browser tab -->
+
+    <!-- Shared and viewport-specific styles -->
+    <link rel="stylesheet" href="style.css"> <!-- links the CSS file for styling -->
+    <link rel="stylesheet" media="(max-width: 599px)" href="mobile.css"><!-- Loads mobile.css only on screens 599px wide or smaller -->
+    <link rel="stylesheet" media="(min-width: 600px) and (max-width: 1023px)" href="tablet.css"> <!-- Loads tablet.css only on screens between 600px and 1023px -->
+    <link rel="stylesheet" media="(min-width: 1024px)" href="laptop.css"> <!-- Loads laptop.css only on screens 1024px wide or larger -->
+
+</head>
+<body>
+    <header> <!-- top section of the page -->
+        <nav> <!-- navigation bar -->
+            <ul> <!-- list to hold links and image -->
+                <li><img src="images/profile.jpg" alt="My Homepage Photo" class="nav-photo"></li> <!-- profile picture with alt text -->
+                <li><a href="index.html">Home</a></li> <!-- link to Home page -->
+                <li><a href="about.html">About Me</a></li> <!-- link to About page -->
+                <li><a href="projects.html">Project</a></li> <!-- link to Projects page -->
+                <li><a href="contact.html">Contact Me</a></li> <!-- link to Contact page -->
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- main content area -->
+        <div class="intro"> <!-- intro section with gradient background -->
+            <h1>Welcome to My Portfolio.</h1> <!-- big welcome heading -->
+            <p>This is my homepage. Use the navigation to check out the other pages!</p> <!-- short intro text -->
+        </div>
+    </main>
+
+    <footer> <!-- bottom section of the page -->
+        <p>© 2025 Nkem.C</p> <!-- copyright notice -->
+    </footer>
+</body>
+</html>

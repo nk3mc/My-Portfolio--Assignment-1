@@ -1,0 +1,5 @@
+/* 3 column cards */
+.container{ max-width:1100px; }
+.project-card{ width:31%; }       /* about 3 per row with gutters */
+.intro h1{ font-size:2.4rem; }
+.intro p{  font-size:1.15rem; }

@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!-- Tells browser this is HTML5 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Ensures proper text encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on mobile -->
+  <title>Contact Me</title> <!-- Title shown in browser tab -->
+
+   <!-- Shared and viewport-specific styles -->
+  <link rel="stylesheet" href="style.css"> <!-- links the CSS file for styling -->
+  <link rel="stylesheet" media="(max-width: 599px)" href="mobile.css"><!-- Loads mobile.css only on screens 599px wide or smaller -->
+  <link rel="stylesheet" media="(min-width: 600px) and (max-width: 1023px)" href="tablet.css"> <!-- Loads tablet.css only on screens between 600px and 1023px -->
+  <link rel="stylesheet" media="(min-width: 1024px)" href="laptop.css"> <!-- Loads laptop.css only on screens 1024px wide or larger -->
+</head>
+<body>
+  <!-- Header with navigation links -->
+  <header>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li> <!-- link to Home page -->
+        <li><a href="about.html">About Me</a></li> <!-- link to About page -->
+        <li><a href="projects.html">Projects</a></li> <!-- link to Projects page -->
+        <li><a href="contact.html" aria-current="page">Contact Me</a></li> <!-- link to Contact page -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content area -->
+  <main class="container">
+   <!-- Header for contact page -->
+    <section class="contact-header" aria-labelledby="contact-title">
+      <h1 id="contact-title">Send me your questions.</h1> <!-- Main heading -->
+      <p>I aim to reply within 1–2 business days.</p>
+    </section>
+
+    <!-- Contact form section -->
+    <section aria-labelledby="form-title">
+      <!-- Hidden heading for accessibility (screen readers) -->
+      <h2 id="form-title" class="visually-hidden">Contact form</h2>
+
+      <!-- Contact form starts -->
+      <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+        
+        <!-- Name field -->
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input
+            type="text" id="name" name="name"
+            placeholder="e.g., Nkem Chukwuemeka"
+            required minlength="2" maxlength="60"
+            pattern="^[A-Za-z][A-Za-z\s'.-]{1,59}$"
+            title="Use letters, spaces, or . ' -"
+          >
+        </div>
+
+        <!-- Email field -->
+        <div class="form-row">
+          <label for="email">Your Email</label>
+          <input
+            type="email" id="email" name="email"
+            placeholder="nkemdilim.chukwuemeka@ontariotechu.net" required
+          >
+        </div>
+
+        <!-- Phone number field -->
+        <div class="form-row">
+          <label for="phone">Cell No.</label>
+          <input
+            type="tel" id="phone" name="phone"
+            placeholder="1234567890"
+            inputmode="numeric" 
+            pattern="^\d{10}$" 
+            title="Enter a 10-digit number (numbers only)"
+            required
+          >
+          <!-- Small helper text -->
+          <small class="hint">Format: 10 digits, numbers only.</small>
+        </div>
+
+        <!-- Message text area -->
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea
+            id="message" name="message" rows="6"
+            placeholder="Question, comment or query…" required
+            minlength="10" maxlength="1000"
+          ></textarea>
+        </div>
+
+        <!-- Simple robot check -->
+        <div class="form-row">
+          <label for="human">* What is 2 + 2? (So I know you aren't a robot)</label>
+          <input
+            type="number" id="human" name="human"
+            placeholder="Answer here"
+            required min="0" step="1"
+          >
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer with email + copyright -->
+  <footer>
+    <p>
+      Contact: <a href="mailto:nkemdilim.chukwuemeka@ontariotechu.net">nkemdilim.chukwuemeka@ontariotechu.net</a>
+      &nbsp;•&nbsp; © 2025 Nkem.C
+    </p>
+  </footer>
+
+  <!--script to check math question before form submits -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      var human = document.getElementById('human').value.trim();
+      if (human !== '4') { // must equal 4
+        e.preventDefault(); // stop form from submitting
+        alert('Please solve the math question correctly (2 + 2 = 4).');
+        document.getElementById('human').focus(); // send cursor back to the field
+      }
+      // Browser also checks "required", email format, and phone pattern automatically
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* 1 column cards for small screens */
+.container{ max-width:540px; }
+.project-card{ width:98%; }       /* one per row */
+.intro h1{ font-size:1.8rem; }
+.intro p{  font-size:1rem;  }
